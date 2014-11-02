@@ -26,8 +26,8 @@
 支持两种皮肤 ：
 
 *	冰块皮肤（或许你认为他是果冻也行,反正都能吃.. \(≧▽≦)/）
-![iceSkin](images/iceSkin/skinPreview.jpg)
+![iceSkin](app/images/iceSkin/skinPreview.jpg)
 *	巧克力皮肤 （¯﹃¯）
-![iceSkin](images/candySkin/skinPreview.jpg)	
+![iceSkin](app/images/candySkin/skinPreview.jpg)
 
 
