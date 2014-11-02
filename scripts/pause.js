@@ -17,6 +17,9 @@ var pause = (function(){
 	var event = function(grid){
 		var hidePause = function(){
 			board.className = 'hide';
+			gameoverBox.className = 'gameover hide';
+			winBox.className = 'win hide';
+			skinBox.className = 'skin hide';
 			grid.bindEvent();
 		};
 		$('.gameover .restart').on('click',function(){
