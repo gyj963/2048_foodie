@@ -18,8 +18,6 @@ function Grid(){
 	this.scoreContainer = document.getElementById('score-container');
 	this.bestContainer = document.getElementById('best-container');
 	this.animated = false;
-//	localStorage['currentScore'] = 0;
-//	localStorage['bestScore'] = 0;
 
 	this.init();
 	this.bindEvent();
