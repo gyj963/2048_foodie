@@ -14,7 +14,7 @@ http://gyj963.github.io/2048_foodie/
 **可扫描以下二维码**：
 
 
-![iceSkin](images/qrcode.png)
+![iceSkin](mdImg/qrcode.png)
 
 ###	功能
    
@@ -29,8 +29,8 @@ http://gyj963.github.io/2048_foodie/
 支持两种皮肤 ：
 
 *	冰块皮肤（或许你认为他是果冻也行,反正都能吃.. \(≧▽≦)/）
-![iceSkin](images/iceSkin/skinPreview.jpg)
+![iceSkin](mdImg/iceSkin.jpg)
 *	巧克力皮肤 （¯﹃¯）
-![iceSkin](images/candySkin/skinPreview.jpg)
-
+![candySkin](mdImg/candySkin.jpg)
+ 
 
