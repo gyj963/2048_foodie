@@ -1,0 +1,79 @@
+#pause{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.60);
+	z-index:10;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+.gameover,.win,.skin{
+	margin: auto;
+	position: relative;
+	z-index:20;
+	width: 250px;
+	height: 150px;
+	display: -webkit-flex;
+	display: flex;
+	background-size: 250px 150px;
+}
+.gameover{
+	background-image: url("../images/gameover.png");
+}
+.win{
+	background-image: url("../images/win.png");
+}
+.skin{
+	border: snow 1px solid;
+	width: 600px;
+	height: 300px;
+	border-radius: 7px;
+}
+.skin img{
+	width: 300px;
+	height: 250px;
+	margin: 20px;
+	padding: 5px;
+}
+.skin img:hover{
+	cursor: pointer;
+}
+.score{
+	margin: auto;
+	font-family: chilled;
+	font-size: 35px;
+	color: #7485c0;
+}
+.pauseRestart,.pauseShare a{
+	-webkit-transition:1s ease all;
+	-moz-transition:1s ease all;
+	position: relative;
+	bottom: 3px;
+	color: #7485c0;
+	font-weight: bolder;
+	font-size:25px;
+	text-decoration: none;
+}
+.pauseRestart:hover,.pauseShare  a{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+}
+#pause.hide,#pause .hide{
+	display: none;
+}
+.cancel{
+	position: absolute;
+}
+@media screen and (max-width: 700px) {
+	.skin{
+		width: 270px;
+		height: 140px;
+		border-radius: 7px;
+	}
+	.skin img{
+		width: 140px;
+		height: 120px;
+		margin: 5px;
+	}
+}
