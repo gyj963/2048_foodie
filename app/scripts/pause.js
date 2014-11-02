@@ -35,8 +35,10 @@ var pause = (function(){
         });
 		$('#pause').on('click',function(){
 			hidePause();
+			skinBox.className = 'skin hide';
 		}).on('tap',function(){
             hidePause();
+            skinBox.className = 'skin hide';
         });
 
 		$('#pause .skin .change').on('click',function(){
