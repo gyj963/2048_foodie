@@ -15,7 +15,7 @@ var shareData = (function(){
 	    authorInfo = "(author/coder:@小熊跳跳跳 ;UI assistant:@大牛每天要画画 ;）",
 	    content = '我正在玩"吃货版2048",你也来试试吧（ps：请确认你处于非饥饿状态..（¯﹃¯））'+authorInfo,
 	    url = window.location.href,
-	    img = window.location.href+'images/icon/favicon2048.png';
+	    img = window.location.href+'mdImg/qrcode.png';
 	var getTitle = function(){
 		return title;
 	};
