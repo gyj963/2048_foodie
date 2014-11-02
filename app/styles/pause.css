@@ -8,7 +8,7 @@
 	height: 100%;
 	margin: 0px;
 }
-.gameover,.win,.skin{
+.gameover,.win{
 	margin: auto;
 	position: relative;
 	z-index:20;
@@ -26,12 +26,16 @@
 }
 .skin{
 	border: snow 1px solid;
-	width: 600px;
-	height: 300px;
 	border-radius: 7px;
+	margin: auto;
+	position: relative;
+	z-index:20;
+	display: -webkit-flex;
+	display: flex;
+	background-size: 250px 150px;
 }
 .skin img{
-	width: 300px;
+	width: 250px;
 	height: 250px;
 	margin: 20px;
 	padding: 5px;
@@ -67,13 +71,11 @@
 }
 @media screen and (max-width: 700px) {
 	.skin{
-		width: 270px;
-		height: 140px;
 		border-radius: 7px;
 	}
 	.skin img{
-		width: 140px;
-		height: 120px;
+		width: 100px;
+		height: 100px;
 		margin: 5px;
 	}
 }
