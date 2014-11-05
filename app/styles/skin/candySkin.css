@@ -17,7 +17,6 @@ h1.title{
 }
 #score-container:after,#best-container:after{
 	color: #894027;
-	text-shadow:1px 1px #d3ad6a;   /*右下阴影*/
 }
 .tableBackground {
 	background-image: url("../../images/candySkin/all.png");

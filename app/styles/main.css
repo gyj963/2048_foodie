@@ -60,6 +60,8 @@ h1.title{
 	font-weight: bolder;
 	background-color: snow;
 	overflow: hidden;
+	width: 4rem;
+	text-align: center;
 }
 #score-container:after,#best-container:after{
 	position: absolute;
@@ -72,7 +74,6 @@ h1.title{
 	line-height: 20px;
 	text-align: center;
 	color: #3c77a4;
-	text-shadow:1px 1px #386790;   /*右下阴影*/
 }
 #score-container:after{
 	content: "score";
@@ -206,6 +207,7 @@ h1.title{
 		font-size: 1.2rem;
 		line-height: 25px;
 		height: 13px;
+		width: 3.7rem;
 	}
 	#score-container:after,#best-container:after{
 		top: 5px;
@@ -264,6 +266,7 @@ h1.title{
 		line-height: 20px;
 		height: 10px;
 		margin: 2px 0 0;
+		width: 2.7rem;
 	}
 	#score-container:after,#best-container:after{
 		top: 5px;

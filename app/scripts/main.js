@@ -16,9 +16,14 @@ var changeSkin = function(grid){
 		pause.changeSkin(grid);
 	});
 };
+var initSkin = function(){
+	skin.setSkin(skin.getLocalStorage());
+};
+
 //页面加载完毕运行函数
 window.onload = function(){
 	adjustHeight();
+	initSkin();
 	var grid = new Grid();
 	pause.initPauseBoard(grid);
 	weiboShare();

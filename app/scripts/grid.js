@@ -34,6 +34,7 @@ Grid.prototype.init = function(){
 	this.isInitState = false;
 	this.bestScore = localStorage.bestScore?parseInt(localStorage.bestScore): 0;
 	this.currentScore = localStorage.currentScore?parseInt(localStorage.currentScore): 0;
+
 	if(localStorage.state){
 		this.state = JSON.parse(localStorage.state);
 	}else{
@@ -773,7 +774,9 @@ Grid.prototype.bindEvent = function(){
 		preState=oldState.clone();
 	};
 
-	var moveTo = function(dir){
+	var moveTo = function(dir,event){
+		event.stopPropagation();
+		event.preventDefault();
 		var gameoverFlag = false;
 		if(!parent.animated){
 			updateState();
@@ -802,33 +805,33 @@ Grid.prototype.bindEvent = function(){
 		}
 	};
 
-	$body.on('swipeLeft',function(){
-			moveTo('left');
-		}).on('swipeRight',function(){
-            moveTo('right');
-        }).on('swipeUp',function(){
-            moveTo('up');
-        }).on('swipeDown',function(){
-            moveTo('down');
+	$body.on('swipeLeft',function(event){
+			moveTo('left',event);
+		}).on('swipeRight',function(event){
+            moveTo('right',event);
+        }).on('swipeUp',function(event){
+            moveTo('up',event);
+        }).on('swipeDown',function(event){
+            moveTo('down',event);
         });
-	$(document).keydown(function(e){
-		var k = e.keyCode;
+	$(document).keydown(function(event){
+		var k = event.keyCode;
 		switch (k){
 //			按 方向键左
 			case 37:
-				moveTo('left');
+				moveTo('left',event);
 				break;
 //			按 方向键右
 			case 39:
-				moveTo('right');
+				moveTo('right',event);
 				break;
 //			按 方向键下
 			case 40:
-				moveTo('down');
+				moveTo('down',event);
 				break;
 //			按 方向键上
 			case 38:
-				moveTo('up');
+				moveTo('up',event);
 				break;
 		}
 	});
