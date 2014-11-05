@@ -765,6 +765,8 @@ Grid.prototype.moveGrid=function(dir,oldState,preState,score){
 Grid.prototype.bindEvent = function(){
 
 	var $body = $('body'),
+		gameContainer = document.getElementById("game-container"),
+		$gameContainer = $(gameContainer),
 		oldState=gridData.getState(),
 		preState=oldState.clone(),
 		parent=this;
@@ -775,7 +777,6 @@ Grid.prototype.bindEvent = function(){
 	};
 
 	var moveTo = function(dir,event){
-		event.stopPropagation();
 		event.preventDefault();
 		var gameoverFlag = false;
 		if(!parent.animated){
@@ -803,17 +804,21 @@ Grid.prototype.bindEvent = function(){
 			}
 			parent.moveGrid(dir,oldState,preState,score);
 		}
-	};
 
-	$body.on('swipeLeft',function(event){
-			moveTo('left',event);
-		}).on('swipeRight',function(event){
-            moveTo('right',event);
-        }).on('swipeUp',function(event){
-            moveTo('up',event);
-        }).on('swipeDown',function(event){
-            moveTo('down',event);
-        });
+	};
+	$gameContainer.on('touchstart',function(event){
+		event.preventDefault();
+	}).on('touchmove',function(event){
+        event.preventDefault();
+    }).on('swipeLeft',function(event){
+		moveTo('left',event);
+	}).on('swipeRight',function(event){
+        moveTo('right',event);
+    }).on('swipeUp',function(event){
+        moveTo('up',event);
+    }).on('swipeDown',function(event){
+        moveTo('down',event);
+    });
 	$(document).keydown(function(event){
 		var k = event.keyCode;
 		switch (k){
@@ -841,8 +846,9 @@ Grid.prototype.bindEvent = function(){
 };
 Grid.prototype.unbindEvent = function(){
 
-	var $body = $('body');
+	var $body = $('body'),
+		$gameContainer = $(gameContainer);
 
-	$body.unbind('swipeLeft').unbind('swipeRight').unbind('swipeUp').unbind('swipeDown');
+	$gameContainer.unbind('swipeLeft').unbind('swipeRight').unbind('swipeUp').unbind('swipeDown');
 	$(document).unbind('keydown');
 };
