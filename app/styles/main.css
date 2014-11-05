@@ -1,10 +1,13 @@
 *{
-	margin: 0px;
-	padding: 0px;
+	 margin: 0px;
+	 padding: 0px;
+ }
+html{
+	font-size: 62.5%;
 }
 body{
 	background-position:center top;
-	background-repeat: repeat-x repeat-y ;
+	background-repeat: repeat-x repeat-y;
 }
 #container{
 	position: relative;
@@ -22,21 +25,22 @@ body{
 	clear:both;
 }
 .headBg{
-	background-size: 700px 155px;
-	background-position: top;
+	background-size: 800px 800px;
+	background-position: 0px 0px;
 	background-repeat: no-repeat;
-	position: absolute;
 	margin: 0 0 0 50%;
-	left:-350px;
+	left: -350px;
 	width: 700px;
 	height: 155px;
+	position: absolute;
 }
 h1.title{
 	float:left;
 	margin: 0;
 	display: block;
 	text-shadow:2px 2px #bababa;   /*右下阴影*/
-	background-position: center;
+	height: 50px;
+	width: 130px;
 }
 .scores-container,.heading>.buttonBox{
 	float:right;
@@ -50,11 +54,12 @@ h1.title{
 	margin-top: 13px;
 	line-height: 47px;
 	height: 35px;
-	font-size: 15px;
+	font-size: 1.4rem;
 	border-radius: 6px;
 	color: #19295C;
 	font-weight: bolder;
-	box-shadow: 4px 0px 3px #AFBBD2;
+	background-color: snow;
+	overflow: hidden;
 }
 #score-container:after,#best-container:after{
 	position: absolute;
@@ -62,7 +67,7 @@ h1.title{
 	top: 10px;
 	left: 0;
 	text-transform: uppercase;
-	font-size: 10px;
+	font-size: 1.4rem;
 	font-weight: bold;
 	line-height: 20px;
 	text-align: center;
@@ -83,17 +88,17 @@ h1.title{
 	left:-75px;
 }
 .grid{
+	width: 100%;
+	height: 100%;
+	background-position:center;
+	font-size: 3rem;
+	text-align: center;
+	line-height: 98px;
 	font-family: chilled;
 	color: white;
 	padding: 0px;
 	margin: 0px;
-	width: 100%;
-	height: 100%;
-	background-position:center;
 	background-color: rgba(255,255,255,0);
-	font-size: 30px;
-	text-align: center;
-	line-height: 98px;
 	border-radius: 3px;
 }
 .grid-container table{
@@ -105,14 +110,14 @@ h1.title{
 	margin: 5px;
 }
 .tableBackground {
-	background-size: 540px 516px;
-	width: 400px;
-	height: 400px;
+	background-size: 785px 780px;
+	background-position: 0px -160px;
 	padding: 46px 70px 70px 70px;
+	width: 400px;
+	height: 395px;
 	position: absolute;
-	left:0px;
-	top:0px;
-
+	left: 5px;
+	top: 0px;
 }
 .buttonBox{
 	padding: 0 10% 0 10%;
@@ -126,7 +131,7 @@ h1.title{
 	background-position: center;
 	background-size: 20px 39px;
 	border-radius: 3px;
-	box-shadow: 3px 0px 3px #AFBBD2;
+	background-color: snow;
 }
 .buttonRestart,.buttonShare,.buttonShare a,.buttonSkin{
 	color: #3c77a4;
@@ -164,9 +169,19 @@ h1.title{
 }
 @media screen and (max-width: 799px) and (min-width: 700px)
 {
-
 	.headBg{
-		background-size: 500px 115px;
+		background-size: 575px 575px;
+		width: 500px;
+		height: 115px;
+		left: -250px;
+	}
+	.tableBackground {
+		background-size: 570px 570px;
+		background-position: 0px -115px;
+		width: 250px;
+		height: 260px;
+		left: 28px;
+		top: 14px;
 	}
 	.game{
 		width: 300px;
@@ -174,7 +189,7 @@ h1.title{
 	}
 	.grid{
 		line-height: 73px;
-		font-size: 25px;
+		font-size: 2.5rem;
 		background-size: 73px 73px;
 	}
 	.grid-container table td{
@@ -187,23 +202,14 @@ h1.title{
 		width: 300px;
 		height: 300px;
 	}
-	.tableBackground {
-		background-repeat: no-repeat;
-		background-size: 390px 380px;
-		width: 300px;
-		height: 300px;
-		padding: 46px 70px 70px 70px;
-		left:25px;
-		top:10px;
-	}
 	#score-container,#best-container{
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 25px;
 		height: 13px;
 	}
 	#score-container:after,#best-container:after{
 		top: 5px;
-		font-size: 10px;
+		font-size: 1.2rem;
 		line-height: 9px;
 	}
 	.buttonBox{
@@ -217,12 +223,20 @@ h1.title{
 	}
 }
 @media screen and (max-width: 700px) {
-
 	.headBg{
-		background-size: 340px 80px;
+		background-size: 368px 425px;
 		width: 320px;
 		height: 85px;
-		left: -160px;
+		left: 50%;
+		margin-left: -160px;
+	}
+	.tableBackground {
+		background-size: 390px 390px;
+		background-position: 0px -80px;
+		width: 125px;
+		height: 140px;
+		left: 29px;
+		top: 25px;
 	}
 	.game{
 		width: 230px;
@@ -230,7 +244,7 @@ h1.title{
 	}
 	.grid{
 		line-height: 50px;
-		font-size: 15px;
+		font-size: 2rem;
 		background-size: 50px 50px;
 	}
 	.grid-container{
@@ -245,25 +259,15 @@ h1.title{
 		width:  50px;
 		height: 50px;
 	}
-	.tableBackground {
-		background-size: 260px 265px;
-		background-repeat: no-repeat;
-		width: 150px;
-		height: 160px;
-		padding: 44px 65px 68px 65px;
-		position: absolute;
-		left:32px;
-		top:20px;
-	}
 	#score-container,#best-container{
-		font-size: 2px;
+		font-size: 1rem;
 		line-height: 20px;
 		height: 10px;
 		margin: 2px 0 0;
 	}
 	#score-container:after,#best-container:after{
 		top: 5px;
-		font-size: 2px;
+		font-size: 1rem;
 		font-weight: bold;
 		line-height: 5px;
 	}
@@ -276,6 +280,6 @@ h1.title{
 		padding: 3px 0px;
 	}
 	.buttonBox .item .iconfont{
-		font-size: 15px;
+		font-size: 1.5rem;
 	}
 }

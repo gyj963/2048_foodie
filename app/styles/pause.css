@@ -16,13 +16,15 @@
 	height: 150px;
 	display: -webkit-flex;
 	display: flex;
-	background-size: 250px 150px;
+	background-size: 250px 315px;
 }
 .gameover{
-	background-image: url("../images/gameover.png");
+	background-image: url("../images/pause.png");
+	background-position: 0px 0px;
 }
 .win{
-	background-image: url("../images/win.png");
+	background-image: url("../images/pause.png");
+	background-position: 0px -162px;
 }
 .skin{
 	border: snow 1px solid;

@@ -774,13 +774,29 @@ Grid.prototype.bindEvent = function(){
 	};
 
 	var moveTo = function(dir){
+		var gameoverFlag = false;
 		if(!parent.animated){
 			updateState();
 			var score = parent.transState(dir,preState);
-			if(parent.checkFull()&&compare(oldState,preState)){
-				pause.gameover(parent);
-			}else if(parent.checkSuccess()){
+			if(parent.checkSuccess()){
 				pause.win(parent);
+			}else if(parent.checkFull()&&compare(oldState,preState)){
+				gameoverFlag = true;
+			}
+
+			if(gameoverFlag){
+				var dirArr = ['left','right','up','down'],
+					tmpState = preState.clone();
+				for(var i = 0;i < dirArr.length; i++){
+					parent.transState(dirArr[i],tmpState);
+					if(!compare(oldState,tmpState)){
+						gameoverFlag = false;
+						break;
+					}
+				}
+			}
+			if(gameoverFlag){
+				pause.gameover(parent);
 			}
 			parent.moveGrid(dir,oldState,preState,score);
 		}

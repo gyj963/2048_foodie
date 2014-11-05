@@ -1,25 +1,27 @@
 body{
-	background-image: url("../../images/iceSkin/bg2.jpg");
+	background-image: url("../../images/iceSkin/bg.jpg");
 }
 .headBg{
-	background-image: url("../../images/iceSkin/heading.png");
+	background-image: url("../../images/iceSkin/all.png");
 	opacity: 0.7;
 }
 h1.title{
-	background-image: url("../../images/iceSkin/2048.png");
-	height: 90px;
-	width: 180px;
-	background-size: 175px 80px;
+	background-image: url("../../images/iceSkin/all.png");
+	background-position: -400px -511px;
+	margin: 20px 0px;
 }
-#score-container,#best-container,.buttonBox .item{
-	background-image: url("../../images/score.png");
+#score-container,#best-container{
+	box-shadow: -3px -3px 6px 0px #AFBBD2 inset;
+}
+.buttonBox .item{
+	box-shadow: -5px -5px 8px 0px #a3afc6 inset;
 }
 .tableBackground {
-	background-image: url("../../images/iceSkin/table.png");
+	background-image: url("../../images/iceSkin/all.png");
 	opacity: 0.5;
 }
 .grid{
-	text-shadow:3px 3px #0000ac;   /*右下阴影*/
+	text-shadow:3px 3px 3px #0000ac;   /*右下阴影*/
 }
 .grid-container {
 	top:-30px;
@@ -28,33 +30,83 @@ h1.title{
 	margin-top: -10px;
 }
 .block0{
-	background-image: url("../../images/iceSkin/iceBlock4.png");
+	background-image: url("../../images/iceSkin/all.png");
+	background-size: 790px 790px;
+	background-position: -420px -692px;
 }
 .block1{
-	background-image: url("../../images/iceSkin/iceBlock0.png");
+	background-image: url("../../images/iceSkin/all.png");
+	background-size: 790px 790px;
+	background-position: 0 -692px;
 }
 .block2{
-	background-image: url("../../images/iceSkin/iceBlock1.png");
+	background-image: url("../../images/iceSkin/all.png");
+	background-size: 790px 790px;
+	background-position: -105px -692px;
 }
 .block3{
-	background-image: url("../../images/iceSkin/iceBlock2.png");
+	background-image: url("../../images/iceSkin/all.png");
+	background-size: 790px 790px;
+	background-position: -210px -692px;
 }
 .block4{
-	background-image: url("../../images/iceSkin/iceBlock3.png");
+	background-image: url("../../images/iceSkin/all.png");
+	background-size: 790px 790px;
+	background-position: -315px -692px;
 }
 @media screen and (max-width: 799px) and (min-width: 700px)
 {
 	h1.title{
-		height: 60px;
-		width: 105px;
-		background-size: 110px 55px;
+		height: 35px;
+		width: 85px;
+		background-position: -265px -350px;
+		background-size: 400px 400px;
+		margin: 14px 0px 2px;
+	}
+	.block0,.block1,.block2,.block3,.block4{
+		background-size: 589px 589px;
+	}
+    .block0{
+	    background-position: -313px -514px;
+    }
+	.block1{
+		background-position: 0 -514px;
+	}
+	.block2{
+		background-position: -77px -514px;
+	}
+	.block3{
+		background-position: -157px -514px;
+	}
+	.block4{
+		background-position: -235px -514px;
 	}
 }
 @media screen and (max-width: 700px) {
 	h1.title{
-		height: 30px;
-		width: 70px;
-		background-size: 70px 30px;
+		height: 29px;
+		width: 55px;
+		background-position: -433px -480px;
+		background-size: 260px 260px;
+		margin: 0px;
+	}
+	.block0,.block1,.block2,.block3,.block4{
+		background-size: 384px 384px;
+	}
+	.block0{
+		background-position: -204px -334px;
+	}
+	.block1{
+		background-position: 0 -334px;
+	}
+	.block2{
+		background-position: -50px -334px;
+	}
+	.block3{
+		background-position: -103px -334px;
+	}
+	.block4{
+		background-position: -155px -334px;
 	}
 	.buttonBox{
 		margin-top: -20px;

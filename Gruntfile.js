@@ -120,6 +120,7 @@ module.exports = function(grunt) {
                  files: [
 	                 '<%= config.app %>/scripts/*.js',
 	                 '<%= config.app %>/styles/*.css',
+	                 '<%= config.app %>/styles/**/*.css',
 	                 '<%= config.app %>/*.html'
                  ]
              }
