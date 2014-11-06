@@ -11,7 +11,7 @@
 http://gyj963.github.io/2048_foodie/
 
 ####	移动设备：
-*表现：ipad完美运行，android手机上的QQ浏览器及微信浏览器上表现一般*
+*表现：iPad、iPhone4s完美运行，android手机上的QQ浏览器及微信浏览器上表现一般* 
 
 **可扫描以下二维码**：
 
