@@ -6,13 +6,11 @@
 'use strict';
 var skin=(function(){
 	var setLocalStorage=function(n){
-		console.log("setLocalStorage ,n:",n);
 		localStorage.curSkin = ''+n;
 	};
 
 	var getLocalStorage = function(){
 		var curSkin = localStorage.curSkin?localStorage.curSkin: 'iceSkin';
-		console.log("getLocalStorage ,curSkin:",curSkin);
 		return curSkin;
 	};
 	var setSkin=function(n){

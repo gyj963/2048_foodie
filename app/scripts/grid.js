@@ -767,17 +767,18 @@ Grid.prototype.bindEvent = function(){
 	var $body = $('body'),
 		gameContainer = document.getElementById("game-container"),
 		$gameContainer = $(gameContainer),
-		oldState=gridData.getState(),
-		preState=oldState.clone(),
-		parent=this;
+		oldState = gridData.getState(),
+		preState = oldState.clone(),
+		parent = this,
+		mouseOffsetX = 0,
+		mouseOffsetY = 0;
 
 	var updateState = function(){
 		oldState=gridData.getState();
 		preState=oldState.clone();
 	};
 
-	var moveTo = function(dir,event){
-		event.preventDefault();
+	var moveTo = function(dir){
 		var gameoverFlag = false;
 		if(!parent.animated){
 			updateState();
@@ -806,37 +807,71 @@ Grid.prototype.bindEvent = function(){
 		}
 
 	};
+//	移动设备 手指滑动 控制方向
 	$gameContainer.on('touchstart',function(event){
 		event.preventDefault();
 	}).on('touchmove',function(event){
         event.preventDefault();
-    }).on('swipeLeft',function(event){
-		moveTo('left',event);
-	}).on('swipeRight',function(event){
-        moveTo('right',event);
-    }).on('swipeUp',function(event){
-        moveTo('up',event);
-    }).on('swipeDown',function(event){
-        moveTo('down',event);
+    }).on('swipeLeft',function(){
+		moveTo('left');
+	}).on('swipeRight',function(){
+        moveTo('right');
+    }).on('swipeUp',function(){
+        moveTo('up');
+    }).on('swipeDown',function(){
+        moveTo('down');
     });
+//	PC 鼠标拖动 控制方向
+	$gameContainer.on('mousedown',function(e){
+		var e = e || window.event;
+		e.preventDefault();
+		mouseOffsetX = e.clientX;
+		mouseOffsetY = e.clientY;
+	}).on('mousemove',function(e){
+        var e = e || window.event;
+        e.preventDefault();
+    }).on('mouseup',function(e){
+        var e = e || window.event;
+        e.preventDefault();
+		var offsetX = e.clientX - mouseOffsetX,
+			offsetY = e.clientY - mouseOffsetY;
+		if(Math.abs(offsetX) < 60 && Math.abs(offsetY) < 60){
+			return;
+		}else if(Math.abs(offsetX) > Math.abs(offsetY)){
+			if(offsetX < 0){
+				moveTo('left');
+			}
+			else if(offsetX > 0){
+				moveTo('right');
+			}
+		}else if(Math.abs(offsetX) < Math.abs(offsetY)){
+			if(offsetY < 0){
+				moveTo('up');
+			}
+			else if(offsetY > 0){
+				moveTo('down');
+			}
+		}
+    });
+//	PC 方向键按下 控制方向
 	$(document).keydown(function(event){
 		var k = event.keyCode;
 		switch (k){
 //			按 方向键左
 			case 37:
-				moveTo('left',event);
+				moveTo('left');
 				break;
 //			按 方向键右
 			case 39:
-				moveTo('right',event);
+				moveTo('right');
 				break;
 //			按 方向键下
 			case 40:
-				moveTo('down',event);
+				moveTo('down');
 				break;
 //			按 方向键上
 			case 38:
-				moveTo('up',event);
+				moveTo('up');
 				break;
 		}
 	});

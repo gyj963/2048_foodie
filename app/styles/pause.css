@@ -2,54 +2,83 @@
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.60);
 	z-index:10;
-	display: -webkit-flex;
-	display: flex;
 	width: 100%;
 	height: 100%;
-	margin: 0px;
+	text-align:center;
+	font-size:0;
 }
-.gameover,.win{
-	margin: auto;
-	position: relative;
-	z-index:20;
-	width: 250px;
-	height: 150px;
-	display: -webkit-flex;
-	display: flex;
-	background-size: 250px 315px;
+#pause:after,#pause>span{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:0;
+	height:100%;
+	vertical-align:middle;
 }
-.gameover{
-	background-image: url("../images/pause.png");
-	background-position: 0px 0px;
+#pause:after{
+	content:'';
 }
-.win{
-	background-image: url("../images/pause.png");
-	background-position: 0px -162px;
-}
-.skin{
+#pause .skin{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
 	border: snow 1px solid;
 	border-radius: 7px;
-	margin: auto;
-	position: relative;
 	z-index:20;
-	display: -webkit-flex;
-	display: flex;
 	background-size: 250px 150px;
 }
-.skin img{
+#pause .skin img{
 	width: 250px;
 	height: 250px;
 	margin: 20px;
 	padding: 5px;
 }
-.skin img:hover{
+#pause .skin img:hover{
 	cursor: pointer;
 }
-.score{
-	margin: auto;
+#pause .gameover,#pause .win{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	/*margin: auto;*/
+	position: relative;
+	z-index:20;
+	width: 250px;
+	height: 150px;
+	/*display: -webkit-flex;*/
+	/*display: flex;*/
+	background-size: 250px 315px;
+}
+#pause .gameover{
+	background-image: url("../images/pause.png");
+	background-position: 0px 0px;
+}
+#pause .win{
+	background-image: url("../images/pause.png");
+	background-position: 0px -162px;
+}
+#pause .gameover:after,#pause .win:after,#pause .gameover>span,#pause .win>span{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+}
+#pause .gameover:after,#pause .win:after{
+	content:'';
+}
+#pause .gameover .score,#pause .win .score{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
 	font-family: chilled;
 	font-size: 35px;
 	color: #7485c0;
+	width: 250px;
 }
 .pauseRestart,.pauseShare a{
 	-webkit-transition:1s ease all;
@@ -72,10 +101,10 @@
 	position: absolute;
 }
 @media screen and (max-width: 700px) {
-	.skin{
+	#pause .skin{
 		border-radius: 7px;
 	}
-	.skin img{
+	#pause .skin img{
 		width: 100px;
 		height: 100px;
 		margin: 5px;

@@ -62,6 +62,7 @@ h1.title{
 	overflow: hidden;
 	width: 4rem;
 	text-align: center;
+	text-decoration: none;
 }
 #score-container:after,#best-container:after{
 	position: absolute;
@@ -126,6 +127,7 @@ h1.title{
 .buttonBox .item{
 	display: inline-block;
 	width: 21%;
+	height: 20px;
 	text-align: center;
 	margin: 0 5.3%;
 	padding: 9px 0px;
@@ -190,7 +192,7 @@ h1.title{
 	}
 	.grid{
 		line-height: 73px;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		background-size: 73px 73px;
 	}
 	.grid-container table td{
@@ -222,6 +224,7 @@ h1.title{
 		width: 20%;
 		margin: 0 5%;
 		padding: 9px 0px;
+		height: 18px;
 	}
 }
 @media screen and (max-width: 700px) {
@@ -246,7 +249,7 @@ h1.title{
 	}
 	.grid{
 		line-height: 50px;
-		font-size: 2rem;
+		font-size: 1rem;
 		background-size: 50px 50px;
 	}
 	.grid-container{
@@ -279,6 +282,7 @@ h1.title{
 	}
 	.buttonBox .item{
 		width: 17%;
+		height: 14px;
 		margin: 0 5%;
 		padding: 3px 0px;
 	}
