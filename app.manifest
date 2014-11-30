@@ -1,0 +1,27 @@
+CACHE MANIFEST
+# 2014/11/30
+CACHE:
+index.html
+bower_components/zepto/zepto.min.js
+bower_components/zepto/zepto-touch.js
+bower_components/zepto/zepto-fx.js
+scripts/main.js
+styles/main.css
+styles/skin/iceSkin.css
+styles/skin/candySkin.css
+styles/font/iconfont/iconfont.eot
+styles/font/iconfont/iconfont.svg
+styles/font/iconfont/iconfont.ttf
+styles/font/iconfont/iconfont.woff
+styles/font/chilled.TTF
+images/icon/favicon.ico
+images/candySkin/all.png
+images/candySkin/bg.png
+images/candySkin/skinPreview.png
+images/iceSkin/all.png
+images/iceSkin/bg.png
+images/iceSkin/skinPreview.png
+images/pause.png
+
+NETWORK:
+*
