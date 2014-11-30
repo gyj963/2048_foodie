@@ -2,6 +2,7 @@ CACHE MANIFEST
 # 2014/11/30
 CACHE:
 index.html
+app.manifest
 bower_components/zepto/zepto.min.js
 bower_components/zepto/zepto-touch.js
 bower_components/zepto/zepto-fx.js
