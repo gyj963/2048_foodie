@@ -805,7 +805,6 @@ Grid.prototype.bindEvent = function(){
 			}
 			parent.moveGrid(dir,oldState,preState,score);
 		}
-
 	};
 //	移动设备 手指滑动 控制方向
 	$gameContainer.on('touchstart',function(event){

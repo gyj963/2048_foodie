@@ -186,18 +186,17 @@ module.exports = function(grunt) {
 		         cwd: '<%= config.app %>',
 		         dest: '<%= config.dist %>',
 		         src: [
-		             '*.{ico,png,txt,md}',
+		             '*.{ico,png,txt,md,manifest}',
 		             'bower_components/**/*.*',
 		             '{,*/}*.html',
 		             'styles/font/*.*',
 		             'styles/font/**/*.*',
-		             'styles/font/**/*.*',
+		             'styles/font/**/*.*'
 		         ]
 		     }]
 		    }
 		}
      });
-
 
 
 	grunt.registerTask('live', ['connect:livereload', 'watch']);
@@ -214,9 +213,7 @@ module.exports = function(grunt) {
 
 	    grunt.task.run([
 	      'connect:test',
-//		  
 	      'mocha'
-//		  
 	    ]);
     });
 	grunt.registerTask('default', 'start the server and preview your app, --allow-remote for remote access', function () {
