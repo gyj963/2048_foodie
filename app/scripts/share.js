@@ -54,47 +54,4 @@ var weiboShare = function(){
 		}
 	}
 };
-/**!
- * 微信内置浏览器的Javascript API，功能包括：
- *
- * 1、分享到微信朋友圈
- * 2、分享给微信好友
- * 3、分享到腾讯微博
- * 4、隐藏/显示右上角的菜单入口
- * 5、隐藏/显示底部浏览器工具栏
- * 6、获取当前的网络状态
- * 7、调起微信客户端的图片播放组件
- * @author zhaoxianlie(http://www.baidufe.com)
- */
-// 所有功能必须包含在 WeixinApi.ready 中进行
-WeixinApi.ready(function(Api){
-	// 微信分享的数据
-	var wxData = {
-		'imgUrl':shareData.getImg(),
-		'link':shareData.getUrl(),
-		'desc':shareData.getContent(),
-		'title':shareData.getTitle()
-	};
 
-	// 分享的回调
-	var wxCallbacks = {
-		// 分享过程需要异步执行
-		async : true,
-		// 分享操作开始之前
-		ready:function () {
-			var self = this;
-			// 假设你需要在这里发一个 ajax 请求去获取分享数据
-			$.post(yourServerUrl,yourPostData,function(responseData){
-				// 可以解析reponseData得到wxData
-				var wxData = responseData;
-				// 调用dataLoaded方法，会自动触发分享操作
-				// 注意，当且仅当 async为true时，wxCallbacks.dataLoaded才会被初始化，并调用
-				self.dataLoaded(wxData);
-			});
-		}
-		/* cancel、fail、confirm、all 方法同示例2，此处略掉 */
-	};
-
-	// 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
-	Api.shareToFriend({}, wxCalbacks);
-});

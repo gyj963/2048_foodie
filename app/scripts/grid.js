@@ -452,7 +452,7 @@ Grid.prototype.moveGrid=function(dir,oldState,preState,score){
 			preNumInGoalGrid=preState[index][goal];
 			coords={h : index,v : goal};
 		}else if(dir ==='tb'){
-			tds = parent._trs[src].getElementsByTagName('td'),
+			tds = parent._trs[src].getElementsByTagName('td');
 			srcGrid = tds[index];
 			srcGridContent=srcGrid.getElementsByTagName('div');
 			$srcGridContent=$(srcGridContent[0]);
@@ -874,13 +874,19 @@ Grid.prototype.bindEvent = function(){
 				break;
 		}
 	});
-	$('.restart').on('click',function(){
-		parent.restart();
+
+	$('.restart').unbind('click').on('click',function(){
+		var confirmRestart = confirm("确定放弃当前进度重新开始吗？");
+		if (confirmRestart)
+		{
+			parent.restart();
+		}
 	});
 };
 Grid.prototype.unbindEvent = function(){
 
 	var $body = $('body'),
+		gameContainer = document.getElementById("game-container"),
 		$gameContainer = $(gameContainer);
 
 	$gameContainer.unbind('swipeLeft').unbind('swipeRight').unbind('swipeUp').unbind('swipeDown');
