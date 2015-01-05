@@ -27,9 +27,14 @@ http://gyj963.github.io/2048_foodie/
 
 **控制移动**：手指滑动。
 
+
 --
 ###	功能
-   
+  
+**可记忆**：当前设备当前浏览器可记忆，下次还能接着玩~
+
+**可离线**：当前设备当前浏览器玩过，下次没有网络时候也能玩~
+ 
 下面有三个按钮：
 ####	重新开始 （左）   
 点击可以重新开始
@@ -44,5 +49,5 @@ http://gyj963.github.io/2048_foodie/
 ![iceSkin](mdImg/iceSkin.jpg)
 *	巧克力皮肤 （¯﹃¯）
 ![candySkin](mdImg/candySkin.jpg)
- 
+
 

@@ -2,10 +2,10 @@ CACHE MANIFEST
 # 2014/11/30
 CACHE:
 index.html
-app.manifest
 bower_components/zepto/zepto.min.js
 bower_components/zepto/zepto-touch.js
 bower_components/zepto/zepto-fx.js
+# 2015/01/06
 scripts/main.js
 styles/main.css
 styles/skin/iceSkin.css
